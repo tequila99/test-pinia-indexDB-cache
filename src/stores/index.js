@@ -6,7 +6,6 @@ localForage.config({
   driver: localForage.INDEXEDDB
 })
 async function indexDbPlugin ({ store, options }) {
-  console.log(options)
   if (!options.persist) return
 
   const key = options.persist?.key || store.$id + '-state'
